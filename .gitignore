@@ -1,0 +1,5 @@
+# Raw downloads and generated data are rebuilt by the build scripts / GitHub Action
+build/cache/
+web/data/
+__pycache__/
+*.pyc

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en" data-theme="black">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Logos Reader</title>
+<meta name="theme-color" content="#000000">
+<meta name="description" content="Offline Bible reader: parallel translations, Greek word study, commentaries, similar verses.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header id="bar">
+  <button id="ref" class="refbtn" aria-label="Choose book and chapter">John 1</button>
+  <button id="trs" class="chip" aria-label="Choose translations">KJV · BSB</button>
+  <span class="spacer"></span>
+  <button id="comm" class="ib" aria-label="Chapter commentary" title="Commentary">
+    <svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
+  <button id="find" class="ib" aria-label="Search" title="Search">
+    <svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg></button>
+  <button id="menu" class="ib" aria-label="Settings and more" title="More">
+    <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+</header>
+
+<main id="reader" tabindex="-1"></main>
+
+<div id="scrim" hidden></div>
+<aside id="sheet" role="dialog" aria-modal="true" hidden>
+  <div class="grab"></div>
+  <div class="sh-head"><button id="sh-back" class="ib" hidden aria-label="Back">
+      <svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <h2 id="sh-title"></h2>
+    <button id="sh-close" class="ib" aria-label="Close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <div id="sh-body"></div>
+</aside>
+<div id="toast" role="status" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
